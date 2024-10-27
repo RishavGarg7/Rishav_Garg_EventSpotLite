@@ -1,0 +1,158 @@
+/* Overlay for modal - centers modal and adds a background overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* High z-index to appear above other elements */
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 0.3s ease-out forwards; /* Fade-in animation */
+}
+
+/* Main content container for the modal */
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px; /* Rounded corners for aesthetic */
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh; /* Prevents overflow on smaller screens */
+  overflow-y: auto; /* Scrollable content */
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transform: scale(0.9); /* Initial scale for zoom-in effect */
+  opacity: 0; /* Start hidden */
+  animation: zoomIn 0.3s ease-out 0.1s forwards; /* Slight delay for smooth zoom-in */
+}
+
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none; /* No background for close button */
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease; /* Color transition on hover */
+}
+
+/* Hover effect for close button */
+.close-button:hover {
+  color: #e74c3c; /* Highlighted color on hover */
+}
+
+/* Image styling within modal */
+.modal-image {
+  width: 100%; /* Full width to fit container */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensure image covers area without stretching */
+  border-radius: 10px;
+  margin-bottom: 1rem; /* Space below image */
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out 0.3s forwards; /* Fade-in delay for smooth transition */
+}
+
+/* Modal title styling */
+h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideUp 0.5s ease-out 0.4s forwards; /* Slide-up animation */
+}
+
+/* Paragraph styling for event details */
+p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  color: #34495e;
+  opacity: 0;
+  animation: slideUp 0.5s ease-out 0.5s forwards; /* Delayed slide-up animation */
+}
+
+/* Delayed animations for each paragraph */
+p:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+p:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Keyframes for zoom-in effect */
+@keyframes zoomIn {
+  from { 
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to { 
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-out animation for modal overlay */
+.modal-overlay.closing {
+  animation: fadeOut 0.3s ease-in forwards;
+}
+
+/* Zoom-out animation for modal content */
+.modal-overlay.closing .modal-content {
+  animation: zoomOut 0.3s ease-in forwards;
+}
+
+/* Keyframes for fade-out */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Keyframes for zoom-out effect */
+@keyframes zoomOut {
+  from { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  to { 
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* Styling for event description */
+.event-description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333; /* Dark text color for readability */
+}
+
+/* Additional styling for event details */
+.event-details {
+  font-style: italic;
+  color: #666; /* Lighter color for secondary info */
+  font-size: 0.9em; /* Slightly smaller font */
+}
