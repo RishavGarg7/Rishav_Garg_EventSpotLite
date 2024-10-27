@@ -64,4 +64,4 @@ To set up the project locally, follow these steps:
 
 ## Deployment
 
-The application is deployed on [Vercel](YOUR_DEPLOYMENT_URL). You can access the live version [here](YOUR_DEPLOYMENT_URL).
+The application is deployed on [Vercel](https://rishav-garg-event-spot-lite.vercel.app/). You can access the live version [here](https://rishav-garg-event-spot-lite.vercel.app/).
