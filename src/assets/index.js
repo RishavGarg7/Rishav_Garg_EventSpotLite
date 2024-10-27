@@ -18,6 +18,7 @@ import SankrantiMela from "./SankrantiMela.jpg";
 import SulaFest from "./SulaFest.jpg";
 import Sunburn from "./Sunburn.jpg";
 import UdaipurWorldMusicFestival from "./UdaipurWorldMusicFestival.jpg";
+import EventSpotLiteLogo from "./EventSpotLiteLogo.png";
 
 export {
   NH7_Weekender,
@@ -40,4 +41,5 @@ export {
   SulaFest,
   Sunburn,
   UdaipurWorldMusicFestival,
+  EventSpotLiteLogo,
 };

@@ -1,103 +1,109 @@
 /* Header Bar Styles */
 .header-bar {
-  background-color: rgba(213, 143, 81, 0.982); /* Semi-transparent dark blue background */
-  padding: 0.3rem; /* Reduced padding for compact look */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  backdrop-filter: blur(5px); /* Blur effect on background for a frosted look */
-  width: 100%; /* Full-width container */
+  background-color: rgba(213, 143, 81, 0.982); /* Tan background with slight transparency for a warm look */
+  padding: 0.3rem; /* Small padding to keep the header compact */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow to give subtle depth */
+  backdrop-filter: blur(5px); /* Blurred background effect for frosted appearance */
+  width: 100%; /* Full-width container to span the entire viewport */
 }
 
 /* Container for header content (logo and search) */
 .header-content {
-  display: flex;
-  justify-content: space-between; /* Space between logo and search input */
-  align-items: center; /* Align items vertically centered */
-  gap: 40%; /* Space between items */
-  width: 100%;
-  max-width: 1200px; /* Restrict max width */
-  margin: 0 auto; /* Center content horizontally */
+  display: flex; /* Flex layout to arrange items horizontally */
+  justify-content: space-between; /* Space out logo and search evenly */
+  align-items: center; /* Center items vertically within the container */
+  gap: 35%; /* Maintain ample space between logo and search sections */
+  width: 100%; /* Full width for flexible layout */
+  max-width: 1200px; /* Maximum width for readability on large screens */
+  margin: 0 auto; /* Center the header content */
 }
 
-/* Logo Title Styles */
+/* Logo and Title Styles */
 .logo-title {
-  margin: 1rem auto; /* Center logo vertically */
-  font-size: 30px; /* Large font size for prominence */
-  font-weight: bold; /* Make font bold */
-  text-transform: none; /* No text transformation */
-  letter-spacing: normal; /* Default letter spacing */
-  color: white; /* White text color */
-  min-width: 30%; /* Ensure minimum width */
+  margin: 1rem auto; /* Center vertically within the header */
+  font-size: 30px; /* Large font size to highlight the title */
+  font-weight: bold; /* Bold for strong emphasis */
+  color: white; /* White color for contrast against background */
+  min-width: 35%; /* Ensures the title section has a minimum width */
+  display: flex; /* Flex layout for icon and text alignment */
+  align-items: center; /* Center-aligns icon and text vertically */
+  justify-content: center; /* Center-aligns content horizontally */
+}
+
+.logo {
+  margin-right: 15px; /* Space between logo icon and title text */
+  width: 35px; /* Set width for the logo icon */
 }
 
 /* Search Section Styles */
 .search-section {
-  flex-grow: 0.8; /* Slightly grow to fill available space */
-  min-width: 30%; /* Minimum width */
-  max-width: 100%; /* Full width allowed */
+  flex-grow: 0.8; /* Allows the search bar to expand slightly */
+  min-width: 30%; /* Sets a minimum width for the search bar */
+  max-width: 100%; /* Allows full width if space allows */
 }
 
 /* Form Styling for Search Section */
 .search-section form {
-  display: flex;
-  align-items: center; /* Center align items vertically */
-  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
-  border-radius: 50px; /* Rounded corners for form */
-  padding: 0.3rem; /* Padding inside form */
-  transition: all 0.3s ease; /* Smooth transition for background change */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Border with light opacity */
-  backdrop-filter: blur(10px); /* Additional blur for form */
+  display: flex; /* Flex layout to arrange input and button in a row */
+  align-items: center; /* Center elements vertically */
+  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background for subtle contrast */
+  border-radius: 50px; /* Rounded corners for modern look */
+  padding: 0.3rem; /* Inner padding for comfortable click area */
+  transition: all 0.3s ease; /* Smooth transition for background change on focus */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for subtle outline */
+  backdrop-filter: blur(10px); /* Additional blur for a frosted effect */
 }
 
-/* Background color change on focus within form */
+/* Background color change when form is focused */
 .search-section form:focus-within {
-  background-color: rgba(255, 255, 255, 0.25); /* Brighter background on focus */
+  background-color: rgba(255, 255, 255, 0.25); /* Lightens background on focus */
 }
 
 /* Input Styling within Search Form */
 .search-section input {
-  flex-grow: 1; /* Make input grow to fit available space */
-  background: transparent; /* Transparent background */
-  border: none; /* No border */
-  padding: 0.5rem 1rem; /* Padding for input */
+  flex-grow: 1; /* Allows input to grow and fill available space */
+  background: transparent; /* Transparent background for cohesive look */
+  border: none; /* Removes default input border */
+  padding: 0.5rem 1rem; /* Padding for comfortable typing */
   font-size: 0.95rem; /* Slightly smaller font size */
-  color: #ffffff; /* White text color */
-  font-weight: 300; /* Light font weight */
+  color: #ffffff; /* White text color for contrast on dark background */
+  font-weight: 300; /* Light font weight for clean appearance */
 }
 
 /* Placeholder styling for input field */
 .search-section input::placeholder {
-  color: rgba(255, 255, 255, 0.7); /* Slightly opaque white placeholder */
+  color: rgba(255, 255, 255, 0.7); /* Slightly opaque white placeholder for readability */
 }
 
-/* Remove outline on focus */
+/* Remove outline on focus for clean look */
 .search-section input:focus {
-  outline: none; /* No outline */
+  outline: none; /* Disables default outline on input */
 }
 
-/* Responsive styling for screens less than 768px */
+/* Responsive styling for screens less than 768px wide */
 @media (max-width: 768px) {
-  /* Wrap items in header content */
+  /* Wrap items in header content on smaller screens */
   .header-content {
-    flex-wrap: wrap; /* Allow items to wrap */
+    flex-wrap: wrap; /* Allows items to stack vertically */
   }
 
-  /* Make search section take full width and adjust order */
+  /* Full-width search section with modified order */
   .search-section {
-    order: 3; /* Move search section below logo */
-    width: 90%; /* Full width on smaller screens */
-    margin: 0 auto 0.5rem; /* Center search bar with bottom margin */
-    max-width: none; /* Remove max-width restriction */
+    order: 3; /* Places search section below the logo on smaller screens */
+    width: 90%; /* Sets full width for smaller viewports */
+    margin: 0 auto 0.5rem; /* Centers search bar with some bottom margin */
+    max-width: none; /* Removes max-width restriction for flexibility */
   }
 
-  /* Display active search section */
+  /* Show search section on smaller screens when active */
   .search-section.active {
-    display: block; /* Ensure display on active state */
+    display: block; /* Ensures visibility of search section */
   }
 
-  /* Adjust logo title styling on smaller screens */
+  /* Adjust logo title styling for smaller screens */
   .logo-title {
-    height: 35px; /* Restrict logo height */
-    margin: 1rem 0; /* Top and bottom margin */
-    width: 100%; /* Full width logo */
+    height: 35px; /* Restrict logo height to fit small screens */
+    margin: 1rem 0; /* Sets equal top and bottom margin */
+    width: 100%; /* Allows logo title to span full width */
   }
 }
