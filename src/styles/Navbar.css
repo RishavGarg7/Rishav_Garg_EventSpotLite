@@ -1,6 +1,6 @@
 /* Header Bar Styles */
 .header-bar {
-  background-color: rgba(44, 62, 80, 0.982); /* Semi-transparent dark blue background */
+  background-color: rgba(213, 143, 81, 0.982); /* Semi-transparent dark blue background */
   padding: 0.3rem; /* Reduced padding for compact look */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   backdrop-filter: blur(5px); /* Blur effect on background for a frosted look */
