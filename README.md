@@ -13,7 +13,7 @@ EventSpot Lite is a responsive single-page web application designed to help user
 
 ## Demo
 
-[Live Demo Link](YOUR_DEPLOYMENT_URL)
+[Live Demo Link](https://rishav-garg-event-spot-lite.vercel.app/)
 
 ## Features
 
@@ -35,7 +35,7 @@ To set up the project locally, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/FirstName_LastName_EventSpotLite.git
+   git clone https://github.com/RishavGarg7/Rishav_Garg_EventSpotLite
    ```
 
 2. Navigate to the project directory:
