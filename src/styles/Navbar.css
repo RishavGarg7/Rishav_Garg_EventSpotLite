@@ -1,9 +1,11 @@
 /* Header Bar Styles */
 .header-bar {
-  background-color: rgba(213, 143, 81, 0.982); /* Tan background with slight transparency for a warm look */
+  background-color: rgb(166, 39, 64); /* Tan background with slight transparency for a warm look */
   padding: 0.3rem; /* Small padding to keep the header compact */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow to give subtle depth */
-  backdrop-filter: blur(5px); /* Blurred background effect for frosted appearance */
+  backdrop-filter: blur(
+    5px
+  ); /* Blurred background effect for frosted appearance */
   width: 100%; /* Full-width container to span the entire viewport */
 }
 
@@ -46,7 +48,12 @@
 .search-section form {
   display: flex; /* Flex layout to arrange input and button in a row */
   align-items: center; /* Center elements vertically */
-  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background for subtle contrast */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.15
+  ); /* Semi-transparent background for subtle contrast */
   border-radius: 50px; /* Rounded corners for modern look */
   padding: 0.3rem; /* Inner padding for comfortable click area */
   transition: all 0.3s ease; /* Smooth transition for background change on focus */
@@ -56,7 +63,12 @@
 
 /* Background color change when form is focused */
 .search-section form:focus-within {
-  background-color: rgba(255, 255, 255, 0.25); /* Lightens background on focus */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.25
+  ); /* Lightens background on focus */
 }
 
 /* Input Styling within Search Form */
@@ -72,7 +84,12 @@
 
 /* Placeholder styling for input field */
 .search-section input::placeholder {
-  color: rgba(255, 255, 255, 0.7); /* Slightly opaque white placeholder for readability */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Slightly opaque white placeholder for readability */
 }
 
 /* Remove outline on focus for clean look */

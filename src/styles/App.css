@@ -1,0 +1,17 @@
+/* Apply box-sizing to all elements to include padding and border in the element’s total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Style for the body, removing default margin and padding and setting a background color */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d0c8c8; /* Light grey background color */
+}
+
+/* Center-aligns text within the main application container and sets a default font */
+.App {
+  text-align: center; /* Centers text within elements in the App container */
+  font-family: Arial, sans-serif; /* Sets the font to Arial or a sans-serif fallback */
+}

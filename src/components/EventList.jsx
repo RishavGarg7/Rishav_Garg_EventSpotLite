@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import eventsData from '../mockData'; // Import mock data
-import EventModal from './EventModal'; // Import modal component
-import '../styles/EventList.css'; // Import styles
+import React, { useState, useEffect } from "react";
+import eventsData from "../mockData"; // Import mock data
+import EventModal from "./EventModal"; // Import modal component
+import "../styles/EventList.css"; // Import styles
 
 const EventList = ({ searchTerm }) => {
   // State to track the currently selected event for modal display
@@ -12,9 +12,10 @@ const EventList = ({ searchTerm }) => {
 
   // Filter events based on the search term whenever it changes
   useEffect(() => {
-    const filtered = eventsData.filter((event) =>
-      event.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      event.location.toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = eventsData.filter(
+      (event) =>
+        event.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        event.location.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setDisplayedEvents(filtered); // Update displayed events with the filtered list
   }, [searchTerm]);
@@ -33,15 +34,15 @@ const EventList = ({ searchTerm }) => {
     <div className="event-list-container">
       <div className="events-grid">
         {displayedEvents.map((event) => (
-          <div 
-            className="event-card" 
-            key={event.id} 
+          <div
+            className="event-card"
+            key={event.id}
             onClick={() => showEventDetails(event)} // Open modal with event details
           >
-            <img 
-              src={event.image} 
-              alt={event.name} 
-              className="event-image" 
+            <img
+              src={event.image}
+              alt={event.name}
+              className="event-image"
               loading="lazy" // Optimize image loading
             />
             <div className="event-info">
@@ -55,10 +56,7 @@ const EventList = ({ searchTerm }) => {
 
       {/* Conditionally render the EventModal if an event is selected */}
       {activeEvent && (
-        <EventModal 
-          event={activeEvent} 
-          onClose={hideEventDetails} 
-        />
+        <EventModal event={activeEvent} onClose={hideEventDetails} />
       )}
     </div>
   );
